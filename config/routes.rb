@@ -1,4 +1,13 @@
 MiniProject::Application.routes.draw do
+
+  match 'TESTAPI/resetFixture' => 'testapi#resetFixture', :defaults => { :format => 'json' }, :via => :post
+
+  match 'TESTAPI/unitTests' => 'testapi#unitTests', :defaults => { :format => 'json' }, :via => :post
+
+  post "users/login", :defaults => { :format => 'json' }
+
+  post "users/add", :defaults => { :format => 'json' }
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
